@@ -20,11 +20,9 @@ class Driver {
         return this.trips().map(function(trip){
             return trip.passenger();
         }
-      );
-  
+      ); 
     }
-
- }
+}
 
 let passengerId = 0
  class Passenger {
@@ -44,7 +42,8 @@ let passengerId = 0
     drivers(){
         return this.trips().map(function(trip){
             return trip.driver();
-        });
+        }
+      );
     }
  }
 
@@ -60,14 +59,15 @@ let passengerId = 0
         driver(){
             return store.drivers.find(driver => {
                 return this.driverId === driver.id;
-            })
+            }
+          );
         }
 
         passenger(){
             return store.passengers.find(passenger => {
                 return this.passengerId === passenger.id;
-            });
-
+            }
+          );
         }
     }
 
